@@ -1,0 +1,21 @@
+<mat-card>
+    <mat-card-title>Entrar</mat-card-title>
+    <mat-card-content style="margin-top: 20px;">
+        <form [formGroup]="formulario">
+            <mat-form-field appearance="outline">
+                <mat-label>Login</mat-label>
+                <input matInput placeholder="Seu usuário" formControlName="login">
+                <mat-icon style="color: #0989E3;" matSuffix>account_box</mat-icon>
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="outline">
+                <mat-label>Senha</mat-label>
+                <input matInput placeholder="Sua senha" type="password" formControlName="passWord">
+                <mat-icon style="color: #0989E3;" matSuffix>vpn_key</mat-icon>
+            </mat-form-field>
+        </form>
+    </mat-card-content>
+    <div class="button">
+        <button class="button-login" mat-raised-button (click)="singIn()">Login</button>
+    </div>
+</mat-card>
