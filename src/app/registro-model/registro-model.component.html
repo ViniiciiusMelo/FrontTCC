@@ -1,0 +1,37 @@
+<div class="mae">
+    <mat-card class="example-card">
+        <p style="color: #ABB2B9;"><span style="font-weight: bold; color: #21618C;">Registro |</span> Materiais</p>
+        <mat-card-content>
+            <form [formGroup]="formulario">
+                <mat-form-field style="width: 100%;" appearance="outline">
+                    <mat-label>Nome</mat-label>
+                    <input matInput placeholder="Nome" formControlName="Nome">
+                    <mat-icon style="color: #0989E3;" matSuffix>format_shapes</mat-icon>
+                </mat-form-field>
+                <mat-form-field style="width: 100%;" appearance="outline">
+                    <mat-label>Descrição</mat-label>
+                    <textarea matInput formControlName="Descricao"></textarea>
+                </mat-form-field>
+
+                <mat-form-field style="width: 100%;" appearance="outline">
+                    <mat-label>Materiais</mat-label>
+                    <mat-select formControlName="Materiais" multiple>
+                        <mat-option *ngFor="let material of materiais" [value]="material">{{material.name}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field style="width: 100%;" appearance="outline">
+                    <mat-label>Texturas</mat-label>
+                    <mat-select formControlName="Texturas" multiple>
+                        <mat-option *ngFor="let textura of texturas" [value]="textura">{{textura.name}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+            </form>
+        </mat-card-content>
+        <mat-card-actions class="button">
+            <button class="button-registro" mat-raised-button routerLink="/home">Voltar</button>
+            <button class="button-registro" mat-raised-button (click)="salvar()">Salvar</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

@@ -1,0 +1,65 @@
+<div class="alig-div">
+
+    <mat-grid-list cols="2" rowHeight="800px">
+        <mat-grid-tile>
+            <form [formGroup]="formulario">
+                <h1 class="title">Cadastre-se</h1>
+                <mat-form-field class="full" appearance="outline">
+                    <mat-label>Primeiro Nome</mat-label>
+                    <mat-icon matSuffix>face</mat-icon>
+                    <input matInput formControlName="FisrtName">
+                </mat-form-field>
+
+                <mat-form-field class="full" appearance="outline">
+                    <mat-label>Sobrenome</mat-label>
+                    <mat-icon matSuffix>assignment</mat-icon>
+                    <input matInput formControlName="SecondName">
+                </mat-form-field>
+
+                <mat-form-field class="full" appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="Email">
+                    <mat-icon matSuffix>email</mat-icon>
+                </mat-form-field>
+                <br>
+                <mat-form-field class="full" appearance="outline">
+                    <mat-label>Telephone</mat-label>
+                    <input type="tel" matInput placeholder="555-555-1234" formControlName="Phone">
+                    <mat-icon matSuffix>phone</mat-icon>
+                </mat-form-field>
+                <br>
+                <mat-form-field class="full" appearance="outline">
+                    <mat-label>User Name</mat-label>
+                    <mat-icon matSuffix>account_circle</mat-icon>
+                    <input matInput formControlName="UserName">
+                </mat-form-field>
+                <br>
+                <mat-form-field class="full" appearance="outline">
+                    <mat-label>Senha</mat-label>
+                    <input matInput type="password" formControlName="PassWord">
+                    <mat-icon matSuffix>vpn_key</mat-icon>
+                </mat-form-field>
+                <br>
+                <mat-form-field class="full" appearance="outline">
+                    <mat-label>Confirma Senha</mat-label>
+                    <input matInput type="password" formControlName="PassWordConfirm">
+                    <mat-icon matSuffix>vpn_key</mat-icon>
+                </mat-form-field>
+
+                <div class="button">
+                    <button class="button-login" mat-raised-button (click)="CriarUser()">Salvar</button>
+                </div>
+            </form>
+
+            
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="row">
+                <img src="./../../assets/images/undraw_my_password_re_ydq7.svg" type="image/png" width="400px"
+                    height="400px">
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+    
+</div>

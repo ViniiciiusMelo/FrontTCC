@@ -1,0 +1,32 @@
+<div class="mae">
+    <mat-card class="example-card">
+        <p style="color: #ABB2B9;"><span style="font-weight: bold; color: #21618C;">Registro |</span> Ativos 3D</p>
+        <mat-card-content>
+            <form [formGroup]="formulario">
+                <mat-form-field style="width: 100%;" appearance="outline">
+                    <mat-label>Nome</mat-label>
+                    <input matInput placeholder="Nome" formControlName="Name">
+                    <mat-icon style="color: #0989E3;" matSuffix>format_shapes</mat-icon>
+                </mat-form-field>
+                <mat-form-field style="width: 100%;" appearance="outline">
+                    <mat-label>Descrição</mat-label>
+                    <textarea matInput formControlName="Descricacao"></textarea>
+                </mat-form-field>
+
+                <mat-form-field style="width: 100%;" appearance="outline">
+                    <mat-label>Tipos</mat-label>
+                    <mat-select>
+                      <mat-option *ngFor="let tipo of listaTipos" [value]="tipo.id">
+                        {{tipo.nome}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+
+            </form>
+        </mat-card-content>
+        <mat-card-actions class="button">
+            <button class="button-registro" mat-raised-button routerLink="/home">Voltar</button>
+            <button class="button-registro" mat-raised-button>Salvar</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

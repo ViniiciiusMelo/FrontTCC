@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { UserService } from 'src/services/user.service';
 
 @Component({
   selector: 'app-login-component',
@@ -8,7 +9,7 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 })
 export class LoginComponentComponent implements OnInit {
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private  userService: UserService ) { }
 
   public formulario: FormGroup;
 
@@ -24,6 +25,8 @@ export class LoginComponentComponent implements OnInit {
   }
 
   public singIn(): void {
+    console.log('CHAMOU LOGAR')
+    this.userService.logar().subscribe(x=> console.log("REsultado LOG", x));
   }
 
 }
